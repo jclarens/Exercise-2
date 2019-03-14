@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+    <!-- <script src="main.js"></script> -->
+ 
+</head>
+<body>
+
+    A:<input type="text" id="nilaiA"> <br><br>
+    B:<input type="text" id="nilaiB"> <br><br>
+    <h1 id="result" style="color:blue">Hasil :</h1>
+    <button onclick="sum()" style="color: blue">sum</button>
+    <button onclick="min()" style="color: blue" >min</button>
+    <button onclick="mul()" style="color: blue" >multiply</button>
+    <button onclick="div()" style="color: blue">divide</button>   
+    
+    <script>
+        var dataA, dataB;
+        function getInput(){
+             dataA = parseInt(document.getElementById("nilaiA").value);
+             dataB = parseInt(document.getElementById("nilaiB").value);
+        }
+
+        function setResult(result){
+            return document.getElementById("result").innerHTML = "Hasil : " + result;
+        }
+
+        function sum(){
+            getInput();
+            var hasil = dataA + dataB;
+            setResult(hasil);
+            alert("Hasil Penjumlahan = "+hasil);
+        }
+        function min(){
+            getInput();
+            var hasil = dataA - dataB;
+            setResult(hasil);
+            alert("Hasil Pengurangan = "+hasil);
+        }
+        function mul(){
+            getInput();
+            var hasil = dataA * dataB;
+            setResult(hasil);
+            alert("Hasil Perkalian = "+hasil);
+        }
+        function div(){
+            getInput();
+            var hasil = dataA / dataB;
+            setResult(hasil);
+            alert("Hasil Pembagian = "+hasil);
+        }
+    </script>
+</body>
+</html>
